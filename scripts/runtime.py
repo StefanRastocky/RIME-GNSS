@@ -1,8 +1,8 @@
 import time
 import queue
 
-from riml.ubx_monitor import run_ubx_monitor, rxq, stop_evt
-from riml.integrity_engine2 import UBXIntegrityEngine
+from rime.ubx_monitor import run_ubx_monitor, rxq, stop_evt
+from rime.integrity_engine import UBXIntegrityEngine
 
 def render(matrix, events, max_rows=40):
     # clear screen
@@ -11,7 +11,7 @@ def render(matrix, events, max_rows=40):
     print("=== SIGNAL STATE MATRIX ===\n")
 
     # header
-    print("GNSS\tSV\tSNR\tEL\tRES\tUSED\tHEALTH\tSEV\tPVT")
+    print("GNSS\tSV\tSNR\tEL\tRES\tUSErx\tHEALTH\tSEV\tPVT")
 
     for row in matrix[:max_rows]:
         print(
